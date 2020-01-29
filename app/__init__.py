@@ -20,7 +20,7 @@ def create_app(): # FACTORY!
     with app.app_context():
         #include the routes, models
         from app.routes import hello_world
-        #from app.models import
+        from app.models import competition,player,team
 
 
     return app
