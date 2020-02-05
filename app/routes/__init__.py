@@ -4,7 +4,7 @@ from app.routes.competitions_api_namespace import  api as competitions_api
 
 api = Api()
 
-@api.route('/')
+@api.route('/test')
 class Test(Resource):
     def get(self):
         return {"test": "succeeded"}
