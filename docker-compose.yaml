@@ -9,7 +9,7 @@ services:
     ports:
       - 8000:5000 #map the port
     environment:
-      -DATABASE_URL='postgresql://root:root@database/test)
+      DATABASE_URL: 'postgresql://root:root@database/test'
     depends_on:
       - database
 
