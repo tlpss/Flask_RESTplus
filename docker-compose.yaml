@@ -1,0 +1,27 @@
+# docker-compose.yml
+version: '3'
+services:
+  flask:
+    image: webapp-flask:latest # name for the image
+    build: #build information (local image)
+      context: . #use only this directory as context
+      dockerfile: Dockerfile #dockerfile to create the image
+    ports: 8000:5000 #map the port
+    environment:
+      #- DATABASE_URL=mysql+pymysql://root:root@localhost:3306/test
+
+  mysql:
+      container_name: flask_mysql
+      restart: always
+      image: mysql:latest
+      environment:
+        MYSQL_ROOT_PASSWORD: 'root'
+           MYSQL_USER: 'root'
+           MYSQL_PASS: 'root'
+           MYSQL_DATABASE: 'test'
+           volumes:
+             - my-datavolume:/var/lib/mysql
+            ports:
+              3306:3306
+ volumes:
+   my-datavolume:
