@@ -2,7 +2,7 @@ FROM python:3.6-alpine
 WORKDIR ./
 COPY requirements.txt requirements.txt
 RUN python -m venv venv
-RUN apk add --no-cache libressl-dev musl-dev libffi-dev
+RUN apt-get install psycopg2 libpq-dev python-dev
 RUN venv/bin/pip install -r requirements.txt
 RUN venv/bin/pip install gunicorn
 COPY app app

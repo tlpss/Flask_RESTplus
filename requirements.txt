@@ -3,6 +3,5 @@ flask-migrate
 flask-sqlalchemy
 flask-restplus
 flask-environments
-cryptography
-PyMySQL
+psycopg2
 

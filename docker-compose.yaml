@@ -8,23 +8,22 @@ services:
       dockerfile: Dockerfile #dockerfile to create the image
     ports:
       - 8000:5000 #map the port
-    #environment:
-      #-DATABASE_URL=mysql+pymysql://root:root@localhost:3306/test
+    environment:
+      -DATABASE_URL='postgresql://root:root@database/test)
     depends_on:
-      - mysql
+      - database
 
-  mysql:
-      container_name: flask_mysql
+  database:
+      container_name: flask_postgres
       restart: always
-      image: mysql:latest
+      image: postgres:12.0-alpine
       environment:
-        MYSQL_ROOT_PASSWORD: 'root'
-        MYSQL_USER: 'root'
-        MYSQL_PASS: 'root'
-        MYSQL_DATABASE: 'test'
+        POSTGRES_USER: 'root'
+        POSTGRES_PASSWORD: 'root'
+        POSTGRESDB: 'test'
       volumes:
-        - my-datavolume:/var/lib/mysql
+        - my-datavolume:/var/lib/postgresql
       ports:
-        - 3306:3306
+        - 8080:8080
 volumes:
   my-datavolume:
