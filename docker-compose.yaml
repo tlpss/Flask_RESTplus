@@ -16,12 +16,12 @@ services:
       image: mysql:latest
       environment:
         MYSQL_ROOT_PASSWORD: 'root'
-           MYSQL_USER: 'root'
-           MYSQL_PASS: 'root'
-           MYSQL_DATABASE: 'test'
-           volumes:
-             - my-datavolume:/var/lib/mysql
-            ports:
-              3306:3306
+        MYSQL_USER: 'root'
+        MYSQL_PASS: 'root'
+        MYSQL_DATABASE: 'test'
+      volumes:
+        - my-datavolume:/var/lib/mysql
+      ports:
+        3306:3306
  volumes:
    my-datavolume:
