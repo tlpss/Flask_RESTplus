@@ -9,7 +9,7 @@ services:
     ports:
       - 8000:5000 #map the port
     environment:
-      DATABASE_URL: 'postgresql://root:root@database/test'
+      DATABASE_URL: 'postgresql://root:root@database:5432'
     depends_on:
       - database
 
@@ -20,10 +20,9 @@ services:
       environment:
         POSTGRES_USER: 'root'
         POSTGRES_PASSWORD: 'root'
-        POSTGRESDB: 'test'
       volumes:
         - my-datavolume:/var/lib/postgresql
       ports:
-        - 8080:8080
+        - 5432:5432
 volumes:
   my-datavolume:

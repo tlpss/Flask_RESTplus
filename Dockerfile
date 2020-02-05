@@ -2,7 +2,8 @@ FROM python:3.6-alpine
 WORKDIR ./
 COPY requirements.txt requirements.txt
 RUN python -m venv venv
-RUN apt-get install psycopg2 libpq-dev python-dev
+RUN apk update \
+    && apk add postgresql-dev gcc python3-dev musl-dev
 RUN venv/bin/pip install -r requirements.txt
 RUN venv/bin/pip install gunicorn
 COPY app app
