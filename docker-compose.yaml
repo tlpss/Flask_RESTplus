@@ -23,5 +23,5 @@ services:
         - my-datavolume:/var/lib/mysql
       ports:
         3306:3306
- volumes:
-   my-datavolume:
+volumes:
+  my-datavolume:
