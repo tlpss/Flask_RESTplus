@@ -1,5 +1,5 @@
 # docker-compose.yml
-version: '2'
+version: '3'
 services:
   flask:
     image: webapp-flask:latest # name for the image
@@ -18,10 +18,10 @@ services:
       restart: always
       image: mysql:latest
       environment:
-        - MYSQL_ROOT_PASSWORD: 'root'
-        - MYSQL_USER: 'root'
-        - MYSQL_PASS: 'root'
-        - MYSQL_DATABASE: 'test'
+        MYSQL_ROOT_PASSWORD: 'root'
+        MYSQL_USER: 'root'
+        MYSQL_PASS: 'root'
+        MYSQL_DATABASE: 'test'
       volumes:
         - my-datavolume:/var/lib/mysql
       ports:
