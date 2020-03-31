@@ -33,7 +33,7 @@ def create_app():  # FACTORY!
         # for standard flask applications this should be done here
 
         # from app.routes import hello_world
-        from app.models import competition,player,team
+        from app.models import Competition, Team, Player
 
     return app
 
