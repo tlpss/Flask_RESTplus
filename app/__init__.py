@@ -1,7 +1,9 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from werkzeug.utils import cached_property # explicit import required
+# FLASK RESTPLUS ISSUE
+import werkzeug
+werkzeug.cached_property = werkzeug.utils.cached_property
 
 import os
 # globally accessible
