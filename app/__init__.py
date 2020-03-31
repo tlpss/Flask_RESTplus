@@ -1,15 +1,12 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-import dotenv
 import os
 # globally accessible
 db = SQLAlchemy()
 
 
 def create_app():  # FACTORY!
-    #dotenv.load_dotenv()
-    #print(os.environ.get('DEBUG') == 'True')
     app = Flask(__name__)
 
     # dynamic configuration based on the FLASK_ENV system env variable
@@ -17,6 +14,8 @@ def create_app():  # FACTORY!
     # this function would load the env file in production as well,
     # when running flask run, it is done automatically
     # we don't need it as this is handled by docker compose
+    #dotenv.load_dotenv()
+
     app.config.from_object('config.Config')
 
 
