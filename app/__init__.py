@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from werkzeug.utils import cached_property # explicit import required
+
 import os
 # globally accessible
 db = SQLAlchemy()
