@@ -20,6 +20,8 @@ services:
       environment:
         POSTGRES_USER: 'root'
         POSTGRES_PASSWORD: 'root'
+      env_file:
+        - .env
       volumes:
         - my-datavolume:/var/lib/postgresql
       ports:
