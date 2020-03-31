@@ -4,4 +4,4 @@ flask-sqlalchemy
 flask-restplus
 python-dotenv
 psycopg2
-unittest
+
