@@ -12,4 +12,5 @@ script:
     - coverage run --source app -m unittest  discover && coverage html
 
 after_success:
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)
+
