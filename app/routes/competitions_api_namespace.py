@@ -25,7 +25,6 @@ class CompetitionsList(Resource):
     @api.marshal_list_with(competition_model)
     def get(self):
         list = Competition.query.all()
-        print(len(list))
         return list
 
     @api.expect(competition_post_parser)

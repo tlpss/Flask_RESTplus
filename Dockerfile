@@ -1,6 +1,6 @@
 FROM python:3.6-alpine
 WORKDIR ./
-COPY requirements.txt requirements.txt
+COPY requirements/requirements.txt requirements.txt
 RUN python -m venv venv
 RUN apk update \
     && apk add postgresql-dev gcc python3-dev musl-dev

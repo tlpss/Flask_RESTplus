@@ -2,6 +2,6 @@ flask
 flask-migrate
 flask-sqlalchemy
 flask-restplus
-flask-environments
+python-dotenv
 psycopg2
 
