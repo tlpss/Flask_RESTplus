@@ -1,4 +1,4 @@
-# Flask_RESTplus [![Build Status](https://travis-ci.org/tlpss/Flask_RESTplus.svg?branch=master)](https://travis-ci.org/tlpss/Flask_RESTplus) [![codecov](https://codecov.io/gh/tlpss/Flask_RESTplus/branch/master/graph/badge.svg)](https://codecov.io/gh/tlpss/Flask_RESTplus)
+# Flask_RESTplus [![Build Status](https://travis-ci.org/tlpss/Flask_RESTplus.svg?branch=master)](https://travis-ci.org/tlpss/Flask_RESTplus) [![codecov](https://codecov.io/gh/tlpss/Flask_RESTplus/branch/master/graph/badge.svg)](https://codecov.io/gh/tlpss/Flask_RESTplus) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tlpss_Flask_RESTplus&metric=alert_status)](https://sonarcloud.io/dashboard?id=tlpss_Flask_RESTplus)
 Flask-Restplus + Docker exploration + CI pipelne
 ## Purposes
 1. learn flask restplus
