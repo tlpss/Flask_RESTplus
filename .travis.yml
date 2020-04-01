@@ -11,7 +11,6 @@ script:
     - coverage erase
     - coverage run --source app -m unittest  discover && coverage html
 
-
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
