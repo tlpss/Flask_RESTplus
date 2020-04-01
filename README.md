@@ -1,4 +1,4 @@
-# Flask_RESTplus
+# Flask_RESTplus [![Build Status](https://travis-ci.org/tlpss/Flask_RESTplus.svg?branch=master)](https://travis-ci.org/tlpss/Flask_RESTplus)
 Flask-Restplus + Docker exploration + CI pipelne
 ## Purposes
 1. learn flask restplus
